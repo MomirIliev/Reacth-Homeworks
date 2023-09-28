@@ -26,7 +26,9 @@ export function Movies({ movies }) {
                 <td>{movie.genre}</td>
                 <td>{movie.plot}</td>
                 <td>
-                  <a href={movie.imdbLink}>Link to the movie {movie.name}</a>
+                  <a href={movie.imdbLink} target="blank">
+                    Link to the movie {movie.name}
+                  </a>
                 </td>
                 <td>
                   <img
@@ -45,5 +47,5 @@ export function Movies({ movies }) {
 }
 
 Movies.propTypes = {
-  movies: PropTypes.arrayOf(object),
+  movies: PropTypes.arrayOf(PropTypes.object),
 };
