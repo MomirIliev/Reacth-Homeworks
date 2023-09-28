@@ -1,0 +1,15 @@
+
+.movies {
+        background-color:lightyellow;
+        border: 2px solid black;  
+        color: darkgreen;
+        text-align: center;  
+}
+
+ th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+} 
