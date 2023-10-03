@@ -1,0 +1,23 @@
+* {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.signUpForm {
+    margin-top: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 10px; 
+    margin: 10px;
+}
+
+table { 
+    box-sizing: border-box;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    /* padding: 10px; */
+}
