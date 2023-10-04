@@ -64,13 +64,20 @@ export function App() {
     if (uniqueId.length === 0) return id;
   }
 
-  function deleteTodo(todo) {
-    setTodos([
-      ...todos.map((item) =>
-        item.id === todo.id ? { id: "", text: "", done: "" } : item
-      ),
-    ]);
+  function deleteTodos(todo) {
+    setTodos((current) =>
+      current.filter((singleTodo) => singleTodo.id !== todo.id)
+    );
   }
+
+  // First Solution for deleting/changint the object in state
+  // function deleteTodo(todo) {
+  //   setTodos([
+  //     ...todos.map((item) =>
+  //       item.id === todo.id ? { id: "", text: "", done: "" } : item
+  //     ),
+  //   ]);
+  // }
 
   return (
     <div id="app">
@@ -85,10 +92,9 @@ export function App() {
       />
       <button onClick={addNewTodo}>Add TODO </button>
       <Todos
-        listOfTodosLength={todos.length}
         listOfTodos={todos}
         markTodoAsDone={markTodoAsDone}
-        deleteTodo={deleteTodo}
+        deleteTodo={deleteTodos}
       />
       <div className="inputName">
         <input

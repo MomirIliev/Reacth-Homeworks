@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 
 export const Todos = ({ listOfTodos, markTodoAsDone, deleteTodo }) => {
   {
-    if (listOfTodos.filter((todo) => todo.id !== "").length === 0) {
+    // if (listOfTodos.filter((todo) => todo.id !== "").length === 0) {          => First Solution which check if there are only empty objects in state
+
+    if (listOfTodos.length === 0) {
       return <h3>There are not added item in the array yet!</h3>;
     } else {
       return (
@@ -58,5 +60,4 @@ Todos.propTypes = {
   listOfTodos: PropTypes.arrayOf(PropTypes.object),
   markTodoAsDone: PropTypes.func,
   deleteTodo: PropTypes.func,
-  todosLength: PropTypes.number,
 };
